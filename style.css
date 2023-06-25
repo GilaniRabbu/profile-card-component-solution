@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --clr-primary-100: hsl(185, 75%, 39%);
+    --clr-primary-200: hsl(229, 23%, 23%);
+    --clr-primary-300: hsl(227, 10%, 46%);
+    --clr-neutral-100: hsl(0, 0%, 59%);
+    --clr-neutral-200: hsl(0, 0%, 59%, 0.5);
+
+    --fs-body: 1.1rem;
+
+    --ff-body: 'Kumbh Sans', sans-serif;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--fs-body);
+    font-family: var(--ff-body);
+    font-weight: var(--fw-regular);
+    background-color: var(--clr-primary-100);
+    color: var(--clr-primary-200);
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(img/bg-pattern-top.svg), url(img/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 48vw bottom 40ch, left 45vw top 44vh;
+}
+
+.profile-card {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.wrapper {
+    max-width: 420px;
+    background-color: white;
+    border-radius: 15px;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-top: -52px;
+    margin-bottom: 20px;
+}
+
+.profile-title {
+    font-size: var(--fs-body);
+    font-weight: var(--fw-bold);
+    margin-bottom: 10px;
+}
+
+.profile-age {
+    color: var(--clr-primary-300);
+    font-weight: var(--fw-regular);
+}
+
+.profile-city {
+    color: var(--clr-primary-300);
+    font-size: 1rem;
+}
+
+.profile-stat {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--clr-neutral-200);
+    margin-top: 30px;
+    padding: 30px 45px;
+}
+
+.stat-number {
+    font-weight: var(--fw-bold);
+    margin-bottom: 5px;
+}
+
+.stat-text {
+    font-size: 0.8rem;
+    color: var(--clr-primary-300);
+    letter-spacing: 1px;
+}
+
+@media (max-width: 390px) {
+    .wrapper {
+        max-width: 300px;
+    }
+
+    .profile-stat {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+}
